@@ -1,3 +1,6 @@
+# zh-loading
+> 绚丽 vue loading 组件
+
 ## 1. Install
   ```
   npm: npm install zh-loading
