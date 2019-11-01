@@ -1,6 +1,6 @@
 # zh-loading
 > 绚丽 vue loading 组件
-## npm adress
+## npm address
 `https://www.npmjs.com/package/zh-loading`
 
 ## 1. Install
