@@ -1,6 +1,6 @@
 # zh-loading
 > 绚丽 vue loading 组件
-## npm address
+## npm 地址
 [https://www.npmjs.com/package/zh-loading](https://www.npmjs.com/package/zh-loading)
 
 
@@ -36,6 +36,8 @@ import ZhLoading from 'zh-loading';
   - borderWidth：圆圈宽度，默认 `6`
 
   - colors：圆圈颜色，默认 []，如果不填，用 `['#629', '#c28', '#e25', '#f53', '#fb2', '#8c4', '#0a9', '#17b']` 填充
+
+  - 以上参数可自由组合，效果自由搭配 😂 
 
 ## 3. Example
 
