@@ -1,11 +1,16 @@
 {
   "name": "zh-loading",
   "description": "vue版绚丽loading组件",
-  "version": "1.0.1",
-  "author": "zonghua2016 <2280314971@qq.com>",
+  "version": "1.0.2",
+  "author": "tongzonghua <tongzonghua@gmail.com>",
   "license": "MIT",
   "private": false,
   "main": "./dist/zh-loading.js",
+  "homepage": "https://github.com/zonghua2016/zh-loading",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zonghua2016/zh-loading.git"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"

@@ -1,26 +1,50 @@
 <template>
-  <div class="ccle" :style="{width: size + 'px', height: size + 'px'}">
-    <b><span><i></i></span></b>
-    <b><span><i></i></span></b>
-    <b><span><i></i></span></b>
-    <b><span><i></i></span></b>
-    <b><span><i></i></span></b>
-    <b><span><i></i></span></b>
-    <b><span><i></i></span></b>
-    <b><span><i></i></span></b>
+  <div class="ccle"
+       :style="{width: size + 'px', height: size + 'px'}">
+
+    <b v-for="index in cicleNum"
+       :key="index"><span><i :style="{borderWidth: borderWidth + 'px', borderColor: cicleColors[index-1]}"></i></span></b>
   </div>
 </template>
 <script>
 export default {
   name: 'zh-loading',
-  props:{
-    size:{
+  props: {
+    size: {
       type: Number,
-      default: 260
+      default: 200
+    },
+    cicleNum: {
+      type: Number,
+      default: 6
+    },
+    borderWidth: {
+      type: Number,
+      default: 6
+    },
+    colors: {
+      type: Array,
+      default: []
     }
   },
-  computed:{
-
+  data() {
+    return {
+      defaultColors: ['#629', '#c28', '#e25', '#f53', '#fb2', '#8c4', '#0a9', '#17b'],
+      cicleColors: []
+    }
+  },
+  watch: {
+    colors: {
+      immediate: true,
+      handler: function (newColors) {
+        if (newColors) {
+          for (let i = 0; i < this.cicleNum; i++) {
+            const color = newColors[i];
+            this.cicleColors[i] = !!color ? color : this.defaultColors[i];
+          }
+        }
+      }
+    }
   }
 }
 </script>
@@ -39,8 +63,6 @@ body {
 }
 
 .ccle {
-  width: 260px;
-  height: 260px;
   position: absolute;
   left: 0;
   right: 0;
@@ -72,7 +94,7 @@ b i {
   display: block;
   width: 100%;
   height: 200%;
-  border-width: 8px;
+  // border-width: 8px;
   border-radius: 50%;
   border-style: solid;
   box-sizing: border-box;
@@ -89,8 +111,10 @@ b:nth-child(1) i {
 }
 
 b:nth-child(2) {
-  width: calc(100% - 30px);
-  height: calc(100% - 30px);
+  // width: calc(100% - 30px);
+  // height: calc(100% - 30px);
+  width: 80%;
+  height: 80%;
   animation: ccle7 2.5s ease-in-out infinite;
 }
 
@@ -99,8 +123,10 @@ b:nth-child(2) i {
 }
 
 b:nth-child(3) {
-  width: calc(100% - 60px);
-  height: calc(100% - 60px);
+  // width: calc(100% - 60px);
+  // height: calc(100% - 60px);
+  width: 60%;
+  height: 60%;
   animation: ccle6 2.5s ease-in-out infinite;
 }
 
@@ -109,8 +135,10 @@ b:nth-child(3) i {
 }
 
 b:nth-child(4) {
-  width: calc(100% - 90px);
-  height: calc(100% - 90px);
+  width: 40%;
+  height: 40%;
+  // width: calc(100% - 90px);
+  // height: calc(100% - 90px);
   animation: ccle5 2.5s ease-in-out infinite;
 }
 
@@ -119,28 +147,34 @@ b:nth-child(4) i {
 }
 
 b:nth-child(5) {
-  width: calc(100% - 120px);
-  height: calc(100% - 120px);
+  // width: calc(100% - 120px);
+  // height: calc(100% - 120px);
   animation: ccle4 2.5s ease-in-out infinite;
+  width: 25%;
+  height: 25%;
 }
 
 b:nth-child(5) i {
-  border-color: #f53;
+  border-color: #fb2;
 }
 
 b:nth-child(6) {
-  width: calc(100% - 150px);
-  height: calc(100% - 150px);
+  width: 15%;
+  height: 15%;
+  // width: calc(100% - 150px);
+  // height: calc(100% - 150px);
   animation: ccle3 2.5s ease-in-out infinite;
 }
 
 b:nth-child(6) i {
-  border-color: #f53;
+  border-color: #8c4;
 }
 
 b:nth-child(7) {
-  width: calc(100% - 180px);
-  height: calc(100% - 180px);
+  width: 10%;
+  height: 10%;
+  // width: calc(100% - 180px);
+  // height: calc(100% - 180px);
   animation: ccle2 2.5s ease-in-out infinite;
 }
 
@@ -155,7 +189,7 @@ b:nth-child(8) {
 }
 
 b:nth-child(8) i {
-  border-color: #f53;
+  border-color: #0a9;
 }
 
 @keyframes ccle1 {

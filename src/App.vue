@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Main :size="size" />
+    <Main :size="80" :cicleNum="4" :borderWidth="3" />
   </div>
 </template>
 
