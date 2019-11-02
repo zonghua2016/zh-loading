@@ -24,7 +24,9 @@ export default {
     },
     colors: {
       type: Array,
-      default: []
+      default: function () {
+        return []
+      }
     }
   },
   data() {
