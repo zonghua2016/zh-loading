@@ -1,5 +1,5 @@
 import Main from './src/components/Main'
-import Typing from './components/Typing'
+import Typing from './src/components/Typing'
 import _Vue from 'vue'
 
 Main.install = Vue => {
