@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Main :size="80" :cicleNum="4" :borderWidth="3" />
+    <ZhLoading :size="80" :cicleNum="4" :borderWidth="3" />
     <Typing>
       <div>
         <h2>
           <p>
-            <span>顺丰到付sfs</span>
+            <span>中文测试chinese test</span>
           </p>
         </h2>
       </div>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Main from './components/Main'
+import ZhLoading from './components/ZhLoading'
 import Typing from './components/Typing'
 export default {
     data(){
@@ -25,7 +25,7 @@ export default {
       }
     },
     components:{
-      Main,
+      ZhLoading,
       Typing
     }
 }

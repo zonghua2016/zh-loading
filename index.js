@@ -1,8 +1,8 @@
-import Loading from './src/components/loading/Main'
+import ZhLoading from './src/components/loading/ZhLoading'
 import Typing from './src/components/typing/Typing'
 import _Vue from 'vue'
 
-const components = [Loading, Typing]
+const components = [ZhLoading, Typing]
 
 const install = Vue => {
   if (install.installed) {
@@ -15,6 +15,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export {
-  Main,
+  ZhLoading,
   Typing
 };

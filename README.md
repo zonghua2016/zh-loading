@@ -16,7 +16,7 @@
 ## 2. Quick Start
 1.引入 `zh-loading` 组件
 ```js
-import ZhLoading from 'zh-loading';
+import { ZhLoading } from 'zh-loading';
 ```
 
 2.在vue组件中使用
@@ -45,4 +45,3 @@ import ZhLoading from 'zh-loading';
 <ZhLoading :size="80" :cicleNum="4" :borderWidth="3" :colors="['#fb2', '#8c4', '#0a9', '#17b']" />
 ```
 
-## 4. 增加了typing 打字组件（测试单独引入）

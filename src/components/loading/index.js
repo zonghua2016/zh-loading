@@ -1,10 +1,10 @@
-import Main from './src/components/Main'
+import ZhLoading from './src/components/ZhLoading'
 import _Vue from 'vue'
 
-Main.install = Vue => {
+ZhLoading.install = Vue => {
   if (!Vue) {
     window.Vue = Vue = _Vue
   }
-  Vue.component(Main.name, Main)
+  Vue.component(ZhLoading.name, ZhLoading)
 }
-export default Main;
+export default ZhLoading;
