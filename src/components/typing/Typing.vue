@@ -7,10 +7,14 @@
 <script>
 export default {
   name: 'Typing',
-  props:{
-    time:{
+  props: {
+    time: {
       type: Number,
       default: 300
+    },
+    typeContent: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -20,7 +24,10 @@ export default {
   },
   mounted() {
     let slot = this.$slots.default;
+    // 获取打印文本
     this.findSlotContent(slot);
+    this.typeContent && (this.content = this.typeContent);
+    
     let typing = this.$refs.content;
     let typingArr = this.content.split('');
     typing.textContent = '';
