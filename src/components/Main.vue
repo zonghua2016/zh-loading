@@ -14,6 +14,7 @@ export default {
       type: Number,
       default: 200
     },
+    // 至少三个，至多6个，做上下限制
     cicleNum: {
       type: Number,
       default: 6

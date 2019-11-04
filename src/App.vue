@@ -1,11 +1,22 @@
 <template>
   <div>
     <Main :size="80" :cicleNum="4" :borderWidth="3" />
+    <Typing>
+      <div>
+        <h2>
+          <p>
+            <span>asf顺丰到付sfs</span>
+          </p>
+        </h2>
+      </div>
+    </Typing>
+    <!-- <Typing>asf顺丰到付sfs</Typing> -->
   </div>
 </template>
 
 <script>
 import Main from './components/Main'
+import Typing from './components/Typing'
 export default {
     data(){
       return {
@@ -14,7 +25,13 @@ export default {
       }
     },
     components:{
-      Main
+      Main,
+      Typing
     }
 }
 </script>
+<style lang="scss">
+  html,body{
+    background: #fff !important;
+  }
+</style>
